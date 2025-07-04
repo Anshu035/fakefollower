@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .box {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      width: 90%;
+      animation: popUp 0.7s ease-out;
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .emoji {
+      font-size: 30px;
+      margin-bottom: 15px;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(to right, #ff5e95, #ff4ead);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 6px 15px rgba(255, 78, 173, 0.3);
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #ff3c8c, #ff1493);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="emoji">🎉😄🚀</div>
+    <h1>Welcome to Your Dashboard!</h1>
+    <p>More fake follower tools coming soon.<br>Stay tuned and gain followers like a pro!</p>
+    <button class="button">🚀 Check Your Instagram</button>
+  </div>
+</body>
+</html>
