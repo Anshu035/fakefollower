@@ -1,0 +1,262 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fefefe, #eaeaea);
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+.nav-alert {
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff5e95, #ff4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 20px;
+  animation: pulseText 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ff4ead;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 3px;
+}
+nav a:hover {
+  color: #ff4ead;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: #ff4ead;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 80vh;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+.hero-content h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Form Styles */
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-box input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+}
+.login-box input:focus {
+  border-color: #ff4ead;
+  box-shadow: 0 0 5px rgba(255, 78, 173, 0.4);
+}
+
+.login-box button {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #ff5e95, #ff4ead);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.login-box button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff3c8c, #ff1493);
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.05);
+  padding-bottom: 15px;
+}
+
+/* Scrolling Text in Footer */
+.scroll-text {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  background: #ffdde1;
+  color: #d6006e;
+  font-weight: bold;
+  padding: 10px 0;
+  border-top: 1px solid #ff4ead;
+  border-bottom: 1px solid #ff4ead;
+}
+
+.scroll-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+footer p {
+  margin: 10px 0 0;
+  padding-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 25px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
