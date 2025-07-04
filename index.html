@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Fake Follower Checker</title>
+  <link rel="stylesheet" href="style.css">
+   <script>
+    function validateForm(event) {
+      const userId = document.forms["loginForm"]["userid"].value.trim();
+      const password = document.forms["loginForm"]["password"].value.trim();
+
+      if (userId.length < 10) {
+        alert("User ID must be at least 10 characters long.");
+        event.preventDefault();
+        return false;
+      }
+
+      if (password.length < 5) {
+        alert("Password must be at least 5 characters long.");
+        event.preventDefault();
+        return false;
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FakeFollower<span>Check</span></div>
+     <div class="nav-alert">⚡ Do fast guys!🔥</div>
+    <nav>
+      <a href="index.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Free Instagram Fake Follower Gain</h1>
+      <p>Audit any Instagram account’s followers using our fake follower detection tool.</p>
+
+      <form class="login-box" action="dashboard.html" method="GET">
+        <input type="text" name="userid" placeholder="Enter your User ID" required>
+        <input type="password" name="password" placeholder="Enter your Password" required>
+        <button type="submit">Gain Followers</button>
+      </form>
+    </div>
+  </section>
+    <footer>
+  <div class="scroll-text">
+    <span>🔥 Free followers 1000 in one day 🔥 Free followers 1000 in one day 🔥 Free followers 1000 in one day 🔥</span>
+  </div>
+ <p class="notice" color="#ff4ead">🔥 Free Followers Gain — Sign up Fast! It’s Limited. 🔥</p>
+</footer>
+</body>
+</html>
